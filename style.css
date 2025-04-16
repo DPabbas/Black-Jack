@@ -1,0 +1,72 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    width: 612px;
+    margin: auto;
+}
+
+/* .main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background-color: #999;
+    margin-top: 200px;
+    height: 250px;
+}
+.btn{
+    width: fit-content;
+    padding: 20px 40px;
+    border-radius: 15px;
+    border: 1px solid #999;
+}
+.btn:hover{
+    background-color:bisque;
+    color: blue;
+} */
+
+                                                                /*blackjack*/
+
+.main{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    background: url(istockphoto-1133423137-612x612.jpg) no-repeat center;
+    height: 50vh;
+    border: 1px solid #000;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-top: 200px;
+    font-size: 2rem;
+    color: #fff;
+    
+}
+
+h1{
+    color: goldenrod;
+    font-size: 2em;
+}
+
+#massage-el {
+    margin: 0;
+    font-size: 1.5em;
+    font-style: italic;
+}
+
+.btn{
+    color: #016f32;
+    width: 250px;
+    background-color: goldenrod;
+    font-size: 0.8em;
+    font-weight: 700;
+    font-family: inherit;
+    padding: 10px;
+    border: 1px solid #016f32;
+    border-radius: 10px;
+}
+.btn:hover {
+    background-color: rgb(255, 200, 61);
+    cursor: pointer;
+}
