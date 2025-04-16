@@ -79,11 +79,23 @@ function reset() {
 
  //show card on duct
  let cardEl = document.querySelector("#card-el")
- cardEl.textContent += fristCard + "," + secondCard
+ cardEl.textContent += fristCard + "," + secondCard 
 
+ //new card option
+ 
+ function newCard() {
+     // new card var
+    let card = 10
+     sum += card
+    startGame()
+    sumEl.textContent = "Sum: " + sum
+    cardEl.textContent = "Cards: " + fristCard + "," + secondCard + "," + card 
+
+ }
+ 
  // game function 
 function startGame() {
- 
+   
 if(sum <= 20) {
     massage = "do you wanat new card ?"
 

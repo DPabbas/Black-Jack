@@ -39,7 +39,7 @@
     align-items: center;
     text-align: center;
     margin-top: 200px;
-    font-size: 2rem;
+    font-size: 1.5rem;
     color: #fff;
     
 }
@@ -65,6 +65,7 @@ h1{
     padding: 10px;
     border: 1px solid #016f32;
     border-radius: 10px;
+    margin: 2px 0px;
 }
 .btn:hover {
     background-color: rgb(255, 200, 61);
