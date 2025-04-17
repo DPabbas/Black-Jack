@@ -64,6 +64,10 @@ function reset() {
 
  let sum = fristCard + secondCard 
 
+//put var to the array 
+let allCard = [ fristCard, secondCard]
+
+
  //cash out
  let hasBlackjack = false
 
@@ -73,28 +77,24 @@ function reset() {
  //remember the answer
  let massage = ""
 
- //show sum of two num
- let sumEl = document.getElementById("sum-el")
- sumEl.textContent += sum
 
- //show card on duct
- let cardEl = document.querySelector("#card-el")
- cardEl.textContent += fristCard + "," + secondCard 
+//show sum of two num
+let sumEl = document.getElementById("sum-el")
 
- //new card option
+//show card on duct
+let cardEl = document.querySelector("#card-el")
  
- function newCard() {
-     // new card var
-    let card = 10
-     sum += card
-    startGame()
-    sumEl.textContent = "Sum: " + sum
-    cardEl.textContent = "Cards: " + fristCard + "," + secondCard + "," + card 
 
- }
- 
- // game function 
+//start game function 
 function startGame() {
+    renderGame()
+}
+ 
+
+// game function 
+function renderGame() {
+sumEl.textContent += sum
+cardEl.textContent += allCard[0] + "," + allCard[1]
    
 if(sum <= 20) {
     massage = "do you wanat new card ?"
@@ -112,10 +112,33 @@ else {
 }
 
 
- //remember the answer and show it in duct
+
+//remember the answer and show it in duct
 let massageEl = document.getElementById("massage-el")
 massageEl.textContent = massage
 }
+
+
+
+//new card option
+function newCard() {
+
+    // new card var
+        let card = 10
+    //
+
+    //push third card to array
+    allCard.push(card)
+    //
+
+        sum += card
+        startGame()
+
+        sumEl.textContent = "Sum: " + sum
+        cardEl.textContent = "Cards: " + allCard[0] + "," + allCard[1] + "," + allCard[2] 
+
+}
+   
 
 // cash out 
 
@@ -124,16 +147,24 @@ massageEl.textContent = massage
 
 
 
+                                                                //array practies
 
 
+/* let chat = [ "Hey how are you doing?", "What does it mean ?", "How old are you?" ]
+
+let newChat = "Hey, Im here."
+
+chat.push(newChat)
+
+// برای پاپ میتونیم پارامتر تعریف کنیم
+chat.pop()
+
+console.log(chat) */
 
 
+                                                                //for loop practies
 
-
-
-
-
-
-
-
+for (let i = 0; i <= 100; i += 10){
+    console.log(i)
+}
 

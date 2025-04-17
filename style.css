@@ -36,6 +36,7 @@
     border-radius: 10px;
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
     text-align: center;
     margin-top: 200px;
@@ -62,11 +63,12 @@ h1{
     font-size: 0.8em;
     font-weight: 700;
     font-family: inherit;
-    padding: 10px;
+    padding: 10px 20px;
     border: 1px solid #016f32;
     border-radius: 10px;
-    margin: 2px 0px;
-}
+    margin: 4px;
+    
+}   
 .btn:hover {
     background-color: rgb(255, 200, 61);
     cursor: pointer;
