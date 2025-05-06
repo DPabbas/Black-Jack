@@ -1,7 +1,7 @@
                                                   // blackjack game
 
- let fristCard = 10
- let secondCard = 6
+ let fristCard = getRanmodCard()
+ let secondCard = getRanmodCard()
 
  let sum = fristCard + secondCard 
 
@@ -27,26 +27,36 @@ let cardEl = document.querySelector("#card-el")
 let massageEl = document.getElementById("massage-el")
  
 
+//creat the function that return random card
+function getRanmodCard (){
+    
+    return Math.floor( Math.random()* 13) + 1 
+}
+
+
 //start game function 
 function startGame() {
+
     renderGame()
 }
  
 
-// game function 
+// game function
 function renderGame() {
 
-
+cardEl.textContent = "Cards: "
 for( let i = 0; i < allCard.length; i++)
 {
 cardEl.textContent += allCard[i] + " "
 }
 
-   
+sumEl.textContent = "Sum: " + sum
+
 if(sum <= 20) {
     massage = "do you wanat new card ?"
 
 }
+
 
 else if (sum === 21) {
     massage = "wohoo, you win"
@@ -58,7 +68,6 @@ else {
     isAlive = false
 }
 
-sumEl.textContent = "Sum: " + sum
 massageEl.textContent = massage
 
 }
@@ -69,18 +78,16 @@ massageEl.textContent = massage
 function newCard() {
 
     // new card var
-        let card = 11
+        let card = getRanmodCard()
     //
-
-    //push third card to array
-        allCard.push(card)
 
         sum += card
 
-        renderGame()
-
-        sumEl.textContent = "Sum: " + sum 
-        cardEl.textContent = "Cards: " + [allCard] + " "
+    //push third card to array
+        allCard.push(card)
+    //
+    
+    renderGame()
         
     }
 
