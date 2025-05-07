@@ -1,12 +1,15 @@
                                                   // blackjack game
+// befor the player click the start game can see the num because it we don need these two let and 
+// and put sum let = 0 / and allCard let = []
+// put isAlive to false frist then in startgame(), equal it to true
 
- let fristCard = getRanmodCard()
- let secondCard = getRanmodCard()
+/*  let fristCard = getRanmodCard()
+ let secondCard = getRanmodCard() */
 
- let sum = fristCard + secondCard 
+ let sum = 0 /* fristCard + secondCard  */
 
 //put var to the array 
-let allCard = [ fristCard, secondCard]
+let allCard = []/* [ fristCard, secondCard] */
 
 //remember the answer
 let massage = ""
@@ -15,7 +18,7 @@ let massage = ""
  let hasBlackjack = false
 
 //alive
- let isAlive = true
+ let isAlive = false
 
 //show sum of two num
 let sumEl = document.getElementById("sum-el")
@@ -29,13 +32,40 @@ let massageEl = document.getElementById("massage-el")
 
 //creat the function that return random card
 function getRanmodCard (){
+    // 1 = ace = 11
+    // j,q,k = 10
+    let randomCard = Math.floor( Math.random()* 13) + 1
+
+    if( randomCard === 1 ){
+        return 11
+    }
+    else if( randomCard > 10){
+        return 10
+    } 
+    else{
+        return randomCard
+    }
+
     
-    return Math.floor( Math.random()* 13) + 1 
 }
 
 
 //start game function 
 function startGame() {
+
+    // because the frist comment I define two random number and Re-assign the sum and allCard and 
+    //put isAlive = true
+
+    isAlive = true
+
+    let randomNumber1 = getRanmodCard()
+
+    let randomNumber2 = getRanmodCard()
+
+
+    sum = randomNumber1 + randomNumber2
+
+    allCard = [randomNumber1,randomNumber2]
 
     renderGame()
 }
@@ -77,6 +107,11 @@ massageEl.textContent = massage
 //new card option
 function newCard() {
 
+    // this logical operator is for avoiding repeat and active at the frist
+    
+    if ( isAlive === true && hasBlackjack === false){
+
+    
     // new card var
         let card = getRanmodCard()
     //
@@ -88,6 +123,6 @@ function newCard() {
     //
     
     renderGame()
-        
+        } 
     }
 
