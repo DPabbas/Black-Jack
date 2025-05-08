@@ -3,6 +3,13 @@
 // and put sum let = 0 / and allCard let = []
 // put isAlive to false frist then in startgame(), equal it to true
 
+// player object
+let player = {
+
+    name: "Abbas: ",
+    chips: 2900
+}
+
 /*  let fristCard = getRanmodCard()
  let secondCard = getRanmodCard() */
 
@@ -28,7 +35,12 @@ let cardEl = document.querySelector("#card-el")
 
 //remember the answer and show it in duct
 let massageEl = document.getElementById("massage-el")
- 
+
+// show name and chips of player
+let playerEl = document.getElementById("player-el")
+
+playerEl.textContent = player.name + " $" + player.chips
+
 
 //creat the function that return random card
 function getRanmodCard (){
